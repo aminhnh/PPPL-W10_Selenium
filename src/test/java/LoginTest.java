@@ -30,9 +30,9 @@ public class LoginTest {
 
         assertAll(
             () -> assertEquals(SUCCESS_URL, currentURL),
-            () -> assertTrue(pageSource.contains("Congratulations"))
+            () -> assertTrue(pageSource.contains("Congratulations")),
+            () -> assertTrue(logoutButton.isDisplayed())
         );
-        logoutButton.isDisplayed();
         driver.quit();
     }
 }
